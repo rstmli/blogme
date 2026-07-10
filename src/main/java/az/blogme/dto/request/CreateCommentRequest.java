@@ -10,9 +10,12 @@ import org.springframework.validation.annotation.Validated;
 @Data
 @Validated
 public class CreateCommentRequest {
+    Long blogId;
     @NotBlank
     String comment;
     @DecimalMin(value = "0.0")
     @DecimalMax(value = "5.0")
     double rate;
 }
+
+

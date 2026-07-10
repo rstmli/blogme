@@ -1,5 +1,6 @@
 package az.blogme.mapper;
 
+import az.blogme.dao.entity.BlogEntity;
 import az.blogme.dao.entity.CommentEntity;
 import az.blogme.dto.request.CreateCommentRequest;
 import az.blogme.dto.response.CommentResponse;
@@ -11,8 +12,9 @@ import java.util.stream.Collectors;
 @Component
 public class CommentMapper {
 
-    public CommentEntity toEntity(CreateCommentRequest dto) {
+    public CommentEntity toEntity(CreateCommentRequest dto, BlogEntity entity) {
         return CommentEntity.builder()
+                .blog(entity)
                 .comment(dto.getComment())
                 .rate(dto.getRate())
                 .build();
