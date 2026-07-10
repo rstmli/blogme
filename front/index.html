@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogMe — Premium Glassmorphism Feed</title>
+    <!-- Xarici CSS faylını bağlayırıq -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Üst Naviqasiya Barı -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">BlogMe</h1>
+            <div class="nav-tabs">
+                <button onclick="switchTab('feed-page')" id="tab-feed-page" class="tab-btn active">Axın</button>
+                <button onclick="switchTab('create-page')" id="tab-create-page" class="tab-btn">Yeni Yazı</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Əsas Konteyner -->
+    <main class="main-container">
+        <!-- Toaster Bildiriş Paneli -->
+        <div id="alert-box" class="alert hidden"></div>
+
+        <!-- SƏHİFƏ 1: Blog Akını -->
+        <div id="feed-page" class="tab-content active-tab">
+            <div id="blog-list" class="fade-in"></div>
+        </div>
+
+        <!-- SƏHİFƏ 2: Form Səhifəsi -->
+        <div id="create-page" class="tab-content">
+            <section class="glass-card fade-in">
+                <h2 class="card-title">✍️ Yeni Post Paylaş</h2>
+                <form id="blog-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="author">Müəllif</label>
+                            <input type="text" id="author" required minlength="1" placeholder="Adınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Mövzu</label>
+                            <input type="text" id="subject" required minlength="1" maxlength="32" placeholder="Maks. 32 simvol">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="content">Məzmun</label>
+                        <textarea id="content" required minlength="1" maxlength="1024" rows="5" placeholder="Nələr düşünürsünüz? (Maks. 1024 simvol)"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Paylaş</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Xarici JavaScript faylını ən sonda bağlayırıq -->
+    <script src="app.js"></script>
+</body>
+</html>

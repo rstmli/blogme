@@ -21,7 +21,7 @@ public class CommentMapper {
     }
 
     public CommentResponse toCommentResponse(CommentEntity commentEntity) {
-        return new CommentResponse(commentEntity.getComment(),commentEntity.getRate());
+        return new CommentResponse(commentEntity.getId(),commentEntity.getComment(),commentEntity.getRate());
     }
 
 

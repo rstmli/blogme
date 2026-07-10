@@ -25,6 +25,7 @@ public class BlogMapper {
 
     public BlogResponse toBlogResponse(BlogEntity blogEntity) {
         return BlogResponse.builder()
+                .id(blogEntity.getId())
                 .author(blogEntity.getAuthor())
                 .subject(blogEntity.getSubject())
                 .content(blogEntity.getContent())

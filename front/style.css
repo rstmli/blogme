@@ -1,0 +1,389 @@
+/* --- PREMIUM GLASSMORPHISM DIZAYN --- */
+:root {
+    --bg-gradient: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 50%, #fce7f3 100%);
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+    
+    --text-main: #1e1b4b;
+    --text-muted: #6b7280;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
+
+    /* Reytinq Rəngləri */
+    --rate-low: #ef4444;      
+    --rate-low-bg: rgba(239, 68, 68, 0.1);
+    --rate-mid: #f59e0b;      
+    --rate-mid-bg: rgba(245, 158, 11, 0.1);
+    --rate-high: #10b981;     
+    --rate-high-bg: rgba(16, 185, 129, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* Üst Naviqasiya Barı */
+.navbar {
+    background: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.nav-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--accent-purple), var(--accent-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.tab-btn.active {
+    background: #ffffff;
+    border-color: var(--glass-border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Əsas Konteyner */
+.main-container {
+    max-width: 680px;
+    margin: 30px auto 0 auto;
+    padding: 0 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-tab {
+    display: block;
+}
+
+/* Şüşə Kart Effekti */
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* Form Elementləri */
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 500px) {
+    .form-grid { grid-template-columns: 1fr; }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+input[type="text"], textarea, select {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: var(--text-main);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    background: #ffffff;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.95;
+    box-shadow: 0 6px 16px rgba(139, 92, 246, 0.35);
+}
+
+/* Instagram Tipli Post Strukturu */
+.post-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.post-header {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.post-avatar {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(45deg, #fdf4ff, #f472b6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.post-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-author {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.post-subject {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.post-body {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #2d2a4a;
+    white-space: pre-line;
+}
+
+/* Instagram Tipli Şərh Düymə Sətri */
+.post-actions {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.btn-toggle-comments {
+    background: transparent;
+    border: none;
+    color: var(--accent-purple);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+    transition: opacity 0.2s ease;
+}
+
+.btn-toggle-comments:hover {
+    opacity: 0.8;
+}
+
+/* Şərhlər Paneli (Gizlənə bilən) */
+.comments-tray {
+    background: rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    display: none; 
+}
+
+.comments-tray.open {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Şərhlərin Reytinqə Görə Rənglənməsi */
+.comment-item {
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.comment-item.rate-high {
+    background: var(--rate-high-bg);
+    border-left: 4px solid var(--rate-high);
+}
+.comment-item.rate-high .comment-stars { color: var(--rate-high); }
+
+.comment-item.rate-mid {
+    background: var(--rate-mid-bg);
+    border-left: 4px solid var(--rate-mid);
+}
+.comment-item.rate-mid .comment-stars { color: var(--rate-mid); }
+
+.comment-item.rate-low {
+    background: var(--rate-low-bg);
+    border-left: 4px solid var(--rate-low);
+}
+.comment-item.rate-low .comment-stars { color: var(--rate-low); }
+
+.comment-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Şərh Input Formu */
+.comment-input-bar {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.comment-input-bar input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+.btn-send-comment {
+    background: var(--text-main);
+    color: white;
+    border: none;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-send-comment:hover { background: #000; }
+
+/* Animasiyalar & Toaster */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+.alert {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 2000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.3s ease;
+}
+.alert-success { background: rgba(16, 185, 129, 0.9); color: white; }
+.alert-error { background: rgba(239, 68, 68, 0.9); color: white; }
+
+
+.hidden { display: none !important; }
+.text-center { text-align: center; padding: 30px 0; color: var(--text-muted); font-size: 14px; }

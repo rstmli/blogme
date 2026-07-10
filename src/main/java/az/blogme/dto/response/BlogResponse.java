@@ -10,6 +10,7 @@ import java.util.List;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class BlogResponse {
+    Long id;
     String author;
     String subject;
     String content;
